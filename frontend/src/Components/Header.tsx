@@ -10,7 +10,7 @@ export default function Header() {
                     />
                 </div>
                 <div className="flex flex-col items-center text-center">
-                    <h1 className="font-bold text-[4rem] md:text-[5rem] lg:text-[6rem]">BRAND NAME</h1>
+                    <h1 className="font-bold text-[3.5rem] md:text-[5rem] lg:text-[6rem]">BRAND NAME</h1>
                     <h2 className="font-bold text-[2rem]">PET GROOMING SALON</h2>
                     <p>AUSTIN, TEXAS</p>
                 </div>
