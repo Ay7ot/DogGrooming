@@ -16,7 +16,7 @@ export function MainContact(){
     })
 
     async function handleSubmit(){
-        axios.post('http://localhost:5000/send-email', formData)
+        axios.post('https://dog-groomer.onrender.com/send-email', formData)
     }
 
     return (

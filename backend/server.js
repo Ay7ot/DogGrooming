@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 const app = express();
 "use strict";
 const nodemailer = require('nodemailer');
+const { config } = require('dotenv');
+
+config()
+
 
 // Set up your SMTP email configuration (using a test account here)
 const transporter = nodemailer.createTransport({
@@ -13,7 +17,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: 'ayomidotzee@gmail.com', // Replace with your email
-    pass: 'bvzuefwexcyxddlk' // Replace with your email password
+    pass: process.env.ACCESS_KEY // Replace with your email password
   }
 });
 
@@ -78,5 +82,5 @@ app.post('/send-otp', (req, res) => {
   });
 });
 
-const port = 5000; // You can choose any available port
-app.listen(port, () => console.log(`Server running on port ${port}`));
+const PORT = process.env.PORT || 3030;// You can choose any available port
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
