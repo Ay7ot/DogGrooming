@@ -39,14 +39,14 @@ export function MainContact(){
     return (
         <section className="mt-[100px] px-10 pb-[200px] flex flex-col items-center">
             <h2 className="font-semibold text-[1.5rem] tracking-wider">CONTACT US</h2>
-            <p className="font-dai text-center text-[#808080] mt-6">
+            <p className=" text-center text-[#808080] mt-6 max-w-[500px]">
                 Contact us if you have any questions or concerns. <br />We are always available to help! <br /><br />
                 Contact us through email below or give us a call at: (123)-456-7890
             </p>
 
             <form className="flex flex-col gap-6 w-full max-w-[400px] mt-10" onSubmit={(e)=>{e.preventDefault(); handleSubmit();}}>
                 <label className="flex flex-col">
-                   <p className="font-dai text-[#808080]">Name</p>
+                   <p className=" text-[#808080]">Name</p>
                     <input 
                         className="border-[#808080] outline-none border-[1px] p-2"
                         value={formData.name}
@@ -59,7 +59,7 @@ export function MainContact(){
                     />
                 </label>
                 <label className="flex flex-col">
-                    <p className="font-dai text-[#808080]">Email Address</p>
+                    <p className=" text-[#808080]">Email Address</p>
                     <input 
                         className="border-[#808080] outline-none border-[1px] p-2"
                         value={formData.email}
@@ -72,7 +72,7 @@ export function MainContact(){
                     />
                 </label>
                 <label className="flex flex-col">
-                    <p className="font-dai text-[#808080]">Phone Number</p>
+                    <p className=" text-[#808080]">Phone Number</p>
                     <input 
                         className="border-[#808080] outline-none border-[1px] p-2"
                         value={formData.phoneNumber}
@@ -85,7 +85,7 @@ export function MainContact(){
                     />
                 </label>
                 <label className="flex flex-col">
-                    <p className="font-dai text-[#808080]">{`Tell us about your dog (Pet Name and Breed as well please)`}</p>
+                    <p className=" text-[#808080]">{`Tell us about your dog (Pet Name and Breed as well please)`}</p>
                     <textarea 
                         rows={4}
                         value={formData.message}
@@ -100,7 +100,7 @@ export function MainContact(){
                 <button className="p-4 flex items-center justify-center bg-blue-400 md:bg-transparent border-blue-400 border-2 text-white md:hover:bg-blue-400 md:hover:text-white transition-all duration-200 ease-in md:text-blue-400 hover:">
                     {loading ? <Loader /> : <p>SUBMIT</p>}
                 </button>
-                <p className={`${emailSuccess === '' ? 'hidden' : emailSuccess === 'Email sent successfully' ? 'text-green-400' : 'text-red-400'} font-dai`}>{emailSuccess}</p>
+                <p className={`${emailSuccess === '' ? 'hidden' : emailSuccess === 'Email sent successfully' ? 'text-green-400' : 'text-red-400'} `}>{emailSuccess}</p>
             </form>
         </section>
     )

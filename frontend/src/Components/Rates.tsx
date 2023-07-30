@@ -12,7 +12,7 @@ export function MainRates(){
         <section className="mt-[100px] px-10 pb-[200px] flex flex-col items-center">
             <h2 className="font-semibold text-[1.5rem] tracking-wider">RATES</h2>
             <div className="py-20 mt-10 text-center border-y-[1px] max-w-[600px]">
-                <h3 className="font-dai font-semibold text-[1.2rem]">
+                <h3 className=" font-semibold text-[1.2rem]">
                     CALL OR EMAIL US FOR EXACT RATES.<br />
                     RATES WILL CHANGE DEPENDING ON DOG SIZE AND SERVICES NEEDED.<br />
                     PRICING RANGES ARE LISTED BELOW.
@@ -21,7 +21,7 @@ export function MainRates(){
                     <a className="md:text-[0.8rem] font-semibold text-[#808080]" href="tel:+2348075200170">PHONE NUMBER: <span className="font-normal cursor-pointer hover:text-blue-300">{`(123)-456-7890`}</span></a>
                     <a className="md:text-[0.8rem] font-semibold text-[#808080]" href="mailto:ayomidotzee@gmail.com">E-MAIL: <span className="font-normal cursor-pointer hover:text-blue-300">contact@youremail.com</span></a>
                 </div>
-                <div className="mt-10 font-dai flex flex-col gap-6 md:grid md:grid-cols-2">
+                <div className="mt-10  flex flex-col gap-6 md:grid md:grid-cols-2">
                     <div>
                         <h4 className="font-semibold text-[1.1rem] text-black">DOG GROOMING</h4>
                         <div className="flex flex-col gap-3 mt-3">
