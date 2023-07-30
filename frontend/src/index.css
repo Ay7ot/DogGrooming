@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dai+Banna+SIL:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navMobile {
+  opacity: 0;
+  transform: translateX(100%); /* Start from outside the viewport to the right */
+  animation: fadeInRight 1s forwards; /* Animation duration and fill mode */
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to the original position (0%) */
+}
+}
+
+/* Fade out to the right */
+.navMobile.hide {
+  display: none;
+  animation: fadeOutRight 1s forwards; /* Animation duration and fill mode */
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0); /* Move to the original position (0%) */
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%); /* Move outside the viewport to the right */
+  }
+}
+
+.fade-in {
+  opacity: 0; /* Start with opacity 0 (fully transparent) */
+  animation: fadeIn 1s forwards; /* Animation duration and fill mode */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Move to opacity 1 (fully visible) */
+  }
+}
+
+.headerImage {
+  background: url('../HeaderDog.jpg') bottom fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Add a div under the brand identity and add the background image to that instead */
+
+
+.fade-in-right-bg {
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.5s;
+}
+
+.fade-in-right-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  transition: background-color 0.5s;
+  z-index: -1;
+}
+
+.fade-in-right-bg:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.fade-in-right-bg:hover::before {
+  right: 0;
+}
+
+.body1 {
+  background: url('../body1.jpg') center fixed;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.body2 {
+  background: url('../body2.jpg') center fixed;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.body3 {
+  background: url('../body3.jpg') center fixed;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
