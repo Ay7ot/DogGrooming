@@ -41,7 +41,7 @@ export function MainContact(){
             <h2 className="font-semibold text-[1.5rem] tracking-wider">CONTACT US</h2>
             <p className="font-dai text-center text-[#808080] mt-6">
                 Contact us if you have any questions or concerns. <br />We are always available to help! <br /><br />
-                Contact us through email below or give us a call at: (614) - 414 - 7270
+                Contact us through email below or give us a call at: (123)-456-7890
             </p>
 
             <form className="flex flex-col gap-6 w-full max-w-[400px] mt-10" onSubmit={(e)=>{e.preventDefault(); handleSubmit();}}>
