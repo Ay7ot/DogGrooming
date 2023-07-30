@@ -7,6 +7,7 @@ import Rates from './Rates';
 import Schedule from './Schedule';
 import Contact from './Contact';
 import BookAppointment from './BookAppointment';
+import Gallery from './Gallery';
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
         <Route path='/rates' element={<Rates />} />
         <Route path='/schedule' element={<Schedule />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/bookAppointment' element={<BookAppointment />} />  
+        <Route path='/bookAppointment' element={<BookAppointment />} />
+        <Route path='/gallery' element={<Gallery />} />  
       </Routes>
     </div>
   );

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Footer from "./Footer";
 import NavOthers from "./NavOthers";
+import { Link } from "react-router-dom";
 
 export function MainAbout(){
     useEffect(()=>{
@@ -46,9 +47,11 @@ export function MainAbout(){
             <p className="py-10 max-w-[600px] md:px-10 text-[#808080]  border-b-[1px]">
                 Here at Shampooch we specialize in making our customers, as well as their people, happy! We are located in the heart of Gahanna, Ohio along the famous Creekside. We are a family owned business with over 20 years combined experience! From a basic nail trim and ear cleaning, to a full hair cut, to dyed hair, or painted nails, we cater to WHATEVER your needs are. Call today and talk to one of our valued groomers about your pet! 
             </p>
-             <button className="mt-10 text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white py-4 px-10 border-2">
-                YOUR GALLERY
-            </button>
+             <Link to='/gallery'>
+                <button className="mt-10 text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white py-4 px-10 border-2">
+                    YOUR GALLERY
+                </button>
+             </Link>
         </section>
     )  
 }
