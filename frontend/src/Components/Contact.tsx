@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import NavOthers from "./NavOthers";
 import Footer from "./Footer";
 import axios from "axios";
+import Loader from "./Loader";
 
 export function MainContact(){
     const [formData, setFormData] = useState({
@@ -11,12 +12,28 @@ export function MainContact(){
         message: ''
     })
 
+    const [emailSuccess, setEmailSuccess] = useState('') 
+
+    const [loading, setLoading] = useState(false)
+
     useEffect(()=>{
         window.scrollTo(0, 0)
-    })
+    },[])
 
     async function handleSubmit(){
-        axios.post('https://dog-groomer.onrender.com/send-email', formData)
+        try {
+            setLoading(true)
+            await axios.post('https://dog-groomer.onrender.com/send-email', formData)
+            setEmailSuccess('Email sent successfully')
+        } catch(err){
+            console.error(err)
+            setEmailSuccess('Error Sending Email')
+        } finally {
+            setLoading(false)
+            setTimeout(()=>{
+                setEmailSuccess('')
+            }, 5000)
+        }
     }
 
     return (
@@ -80,9 +97,10 @@ export function MainContact(){
                         className="border-[1px] border-[#808080] outline-none p-2"
                     />
                 </label>
-                <button className="p-4 bg-blue-400 md:bg-transparent border-blue-400 border-2 text-white md:hover:bg-blue-400 md:hover:text-white transition-all duration-200 ease-in md:text-blue-400 hover:">
-                    SUBMIT
+                <button className="p-4 flex items-center justify-center bg-blue-400 md:bg-transparent border-blue-400 border-2 text-white md:hover:bg-blue-400 md:hover:text-white transition-all duration-200 ease-in md:text-blue-400 hover:">
+                    {loading ? <Loader /> : <p>SUBMIT</p>}
                 </button>
+                <p className={`${emailSuccess === '' ? 'hidden' : emailSuccess === 'Email sent successfully' ? 'text-green-400' : 'text-red-400'} font-dai`}>{emailSuccess}</p>
             </form>
         </section>
     )
