@@ -47,7 +47,7 @@
 }
 
 .headerImage {
-  background: url('../HeaderDog.jpg') bottom fixed;
+  background: url('../HeaderDog.jpg') bottom ;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -83,24 +83,33 @@
 }
 
 .body1 {
-  background: url('../body1.jpg') center fixed;
+  background: url('../body1.jpg') center ;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .body2 {
-  background: url('../body2.jpg') center fixed;
+  background: url('../body2.jpg') center ;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .body3 {
-  background: url('../body3.jpg') center fixed;
+  background: url('../body3.jpg') center ;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width:768px) {
+  .headerImage,
+  .body1,
+  .body2,
+  .body3 {
+    background-attachment: fixed;
+  }
 }
 
 .loader {
