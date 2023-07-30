@@ -15,7 +15,7 @@ export default function Home() {
     })
 
     return (
-        <div className="fade-in pb-10" id="scroll-container">
+        <div className="fade-in pb-10">
             <Navbar />
             <Header />
             <MainAbout /> 
