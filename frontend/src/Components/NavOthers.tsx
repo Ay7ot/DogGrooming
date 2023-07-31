@@ -11,7 +11,7 @@ export default function NavOthers() {
     }
 
     return (
-        <nav className="shadow-md sm:shadow-none sm:flex sm:items-center sm:justify-center sticky top-0 bg-white p-4 ">
+        <nav className="shadow-md sm:shadow-none sm:flex sm:items-center sm:justify-center z-[999999] sticky top-0 bg-white p-4 ">
             <div className='flex items-center justify-between'>
                 <div className='sm:hidden'></div>
                 <Link to="/" className="flex sm:hidden items-center font-montserrat">
