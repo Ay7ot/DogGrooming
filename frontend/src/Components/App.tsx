@@ -8,6 +8,7 @@ import Schedule from './Schedule';
 import Contact from './Contact';
 import BookAppointment from './BookAppointment';
 import Gallery from './Gallery';
+import CallButton from './CallButton';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/bookAppointment' element={<BookAppointment />} />
         <Route path='/gallery' element={<Gallery />} />  
       </Routes>
+      <CallButton />
     </div>
   );
 }
